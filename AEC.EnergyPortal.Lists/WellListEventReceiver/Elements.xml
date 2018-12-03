@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Receivers ListUrl="Lists/AECMasterWellList">
+    <Receiver>
+      <Name>WellListEventReceiverItemAdded</Name>
+      <Type>ItemAdded</Type>
+      <Assembly>$SharePoint.Project.AssemblyFullName$</Assembly>
+      <Class>AEC.EnergyPortal.Lists.WellListEventReceiver.WellListEventReceiver</Class>
+      <SequenceNumber>10001</SequenceNumber>
+    </Receiver>
+    <Receiver>
+      <Name>WellListEventReceiverItemUpdated</Name>
+      <Type>ItemUpdated</Type>
+      <Assembly>$SharePoint.Project.AssemblyFullName$</Assembly>
+      <Class>AEC.EnergyPortal.Lists.WellListEventReceiver.WellListEventReceiver</Class>
+      <SequenceNumber>10001</SequenceNumber>
+    </Receiver>
+    <Receiver>
+      <Name>WellListEventReceiverItemDeleting</Name>
+      <Type>ItemDeleting</Type>
+      <Assembly>$SharePoint.Project.AssemblyFullName$</Assembly>
+      <Class>AEC.EnergyPortal.Lists.WellListEventReceiver.WellListEventReceiver</Class>
+      <SequenceNumber>10001</SequenceNumber>
+    </Receiver>
+  </Receivers>
+</Elements>

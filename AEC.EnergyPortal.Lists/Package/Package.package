@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="bbce4cc7-166a-4eef-a6b1-1a5873a8eb33" solutionId="bbce4cc7-166a-4eef-a6b1-1a5873a8eb33" resetWebServer="false" sharePointProductVersion="15.0" name="AEC.EnergyPortal.Lists" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="d37cb229-8aeb-4113-b9b4-70b61757d916" />
+  </features>
+</package>

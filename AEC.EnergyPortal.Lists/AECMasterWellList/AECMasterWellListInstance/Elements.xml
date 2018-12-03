@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="Master Well List" OnQuickLaunch="TRUE" TemplateType="100" Url="Lists/AECMasterWellList" Description="Anschutz Exploration Corporation Master Well List. "></ListInstance>
+</Elements>

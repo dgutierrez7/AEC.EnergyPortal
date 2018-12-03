@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Field Name="mwlAcquiredDate" ID="{AD7CC326-A5D4-413C-A498-FCC79D88E348}" Type="DateTime" DisplayName="Acquired Date" Description="EPEX [AcquiredDate]" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateOnly" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE" ShowInListSettings="TRUE"/>
+  <Field Name="mwlAcquiredFrom" ID="{AAFB6D34-5E62-4BC1-A31E-8AC816FB1D46}" Type="Text" DisplayName="Acquired From" Description="EPEX [AcquiredFrom]" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"/>
+  <Field Name="mwlActionRequired" ID="{E0D4A299-2DE9-40DB-AC1D-36BFE0E59916}" DisplayName="Action Required" Group="AEC MWL Columns" Type="Text" Required="FALSE"/><!-- User Field -->
+  <Field Name="mwlAFEApprovalDate" ID="{7CB06D92-BA64-48BA-9420-8EE3D6191329}" Type="DateTime" DisplayName="AFE Approval Date" Group="AEC MWL Columns" Description="AFEN [AFE_APPROVALS/APPROVALDATE]" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateOnly" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"/>
+  <Field Name="mwlAFECreateDate" ID="{937AAAAE-AD6B-4B2E-8C9E-8BCA5AAB90EB}" Type="DateTime" DisplayName="AFE Create Date" Description="AFEN [AFE_TOP/CREATION_DATE]" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateOnly" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"/>
+  <Field Name="mwlAFEGrossActual" ID="{54A6B098-9D87-41BE-AE0F-149EF6E25E28}" Type="Currency" DisplayName="AFE Gross Actual" Description="AFEN [ACTUAL_AMOUNTS/GROSS_AMOUNT]" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"/>
+  <Field Name="mwlAFEGrossEstimate" ID="{1B7B319C-DFC8-4B6C-A8DA-B01F877124D4}" Type="Currency" DisplayName="AFE Gross Estimate" Description="AFEN [AFE_TOP/TOTAL_GROSS_ESTIMATE]" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"/>
+  <Field Name="mwlAFEGrossField" ID="{C8B40568-6C6F-4343-A0DB-1FC61A463EFA}" Type="Currency" DisplayName="AFE Gross Field" Description="AFEN [FIELDCOST_AMOUNTS/GROSS_AMOUNT]" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"/>
+  <Field Name="mwlAFELink" ID="{442EB6F2-9924-469B-A3A6-91DCDCEDC373}" Type="URL" DisplayName="AFE Link" Description="AFEN [AFE_TOP/DOCUMENT_ID]" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="Hyperlink" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"/>
+  <Field Name="mwlAFENetActual" ID="{6F67EAAE-1E9A-4B31-B66D-7D0B756A4B37}" Type="Calculated" DisplayName="AFE Net Actual" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateOnly" LCID="1033" ResultType="Number" ReadOnly="TRUE"  ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE">
+    <Formula>=mwlAFEGrossActual*mwlWI</Formula>
+    <FormulaDisplayNames>=[AFE Gross Actual]*[WI]</FormulaDisplayNames>
+    <FieldRefs>
+      <FieldRef Name="WI" />
+      <FieldRef Name="AFEGrossActual" />
+    </FieldRefs>
+  </Field>
+  <Field Name="mwlAFENetEstimate" ID="{7A56288F-E4CD-481A-967C-AFD61B739658}" Type="Currency" DisplayName="AFE Net Estimate" Description="AFEN [AFE_TOP/TOTAL_NET_ESTIMATE]" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"/>
+  <Field Name="mwlAFENetField" ID="{EBDB72C0-03A1-4F0C-B505-1D2F294BE61F}" Type="Currency" DisplayName="AFE Net Field" Description="AFEN [FIELDCOST_AMOUNTS/NET_AMOUNT]" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"/>
+  <Field Name="mwlAFENumber" ID="{de4254a2-ad14-4740-90a8-01e9763ecfe7}" Type="Text" DisplayName="AFE Number" Description="AFEN [AFENUMBER/AFENUMBER]" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"/>
+  <Field Name="mwlAFEOBODeadline" ID="{9D61C537-0A16-4DA3-8072-C96816E3620B}" Type="DateTime" DisplayName="AFE OBO Deadline" Description="Data Mart field: OBOResponseDeadline" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateOnly" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"/>
+  <Field Name="mwlAFEReceivedDate" ID="{6025cf62-760f-4af1-befb-774c5e289949}" Type="DateTime" DisplayName="AFE Received Date" Group="AEC MWL Columns" Description="EPEX [OBOElectionReceived]" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateOnly" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"/>
+  <Field Name="mwlAFEStatus" ID="{59766583-B225-43BB-9499-744F3D90D68D}" Type="Text" DisplayName="AFE Status" Description="AFEN [AFE_TOP/STATUS]" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"/>
+  <Field Name="mwlAFEType" ID="{69D5D4EC-5521-41D8-BB49-29513C9BA3F6}" Type="Text" DisplayName="AFE Type" Description="AFEN [AFE_PRIMARY_ATTRIBUTES/ATTRIBUTE1_VALUE]" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"/>
+  <Field Name="mwlAPDApprovedDate" ID="{767662e0-d2d7-4fc3-9751-90846c984ea4}" Type="DateTime" DisplayName="APD Approved Date" Group="AEC MWL Columns" Description="EPEX [ApdApprovedDate]" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateOnly"/>
+  <Field Name="mwlAPDExpirationDate" ID="{F4ABDBF9-28BF-4189-B9FA-B70DC5B4E706}" Type="DateTime" DisplayName="APD Expiration Date" Description="EPEX [ApdExpirationDate]" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateOnly" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"/>
+  <Field Name="mwlAPI" ID="{98f92ee3-75dc-4ec7-ada5-42b3c2627f3e}" Type="Text" DisplayName="API" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" Description="EPEX [ApiNumber]" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"/>
+  <Field Name="mwlBHLatitude" ID="{816d1964-73d6-4724-9c99-ccacf15102d3}" Type="Number" DisplayName="BH Latitude" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Percentage="FALSE" Description="EPEX [ActualBottomLatitude], [TargetBottomLatitude]" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"/>
+  <Field Name="mwlBHLongitude" ID="{c014b4cf-d44c-42ac-bff8-9abefd7f62b0}" Type="Number" DisplayName="BH Longitude" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Description="EPEX [ActualBottomLongitude], [TargetBottomLongitude]" Percentage="FALSE" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"/>
+  <Field Name="mwlBHRange" ID="{49ecd47a-de93-4013-9943-76180882d451}" Type="Text" DisplayName="BH Range" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" Description="EPEX [ActualBottomRange], [TargetBottomRange]" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"/>
+  <Field Name="mwlBHSection" ID="{d4878193-96dc-48c5-a44f-0606eb6eb520}" Type="Number" DisplayName="BH Section" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Description="EPEX [ActualBottomSection], [TargetBottomSection]" Percentage="FALSE" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"/>
+  <Field Name="mwlBHTownship" ID="{55947eab-9a03-460c-a57d-9d1cb314fdd6}" Type="Text" DisplayName="BH Township" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" Description="EPEX [ActualBottomTownship], [TargetBottomTownship]" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"/>
+  <Field Name="mwlBOPM" ID="{C9BE404E-49B9-494E-8425-D76EA9E16ADD}" Type="Number" DisplayName="BOPM" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Percentage="FALSE" /><!-- User Field -->
+  <Field Name="mwlBudgetYear" ID="{50B3B080-8F55-4E2F-9802-80733CC0FF59}" Type="Number" DisplayName="Budget Year" Description="AFEN [AFE_TOP/BUDGET_YEAR]" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE"  Percentage="FALSE" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"/>
+  <Field Name="mwlCommunizationAgreement" ID="{cf26c20f-0279-40fe-8763-5c54bf2af85f}" Type="Boolean" DisplayName="Communization Agreement" Group="AEC MWL Columns" EnforceUniqueValues="FALSE" Indexed="FALSE">
+    <Default>0</Default>
+  </Field><!-- User Field -->
+  <Field Name="mwlCompletionCost" ID="{8068963e-f1d7-47e2-86fa-742beb4c7314}" Type="Number" DisplayName="Completion Cost" Group="AEC MWL Columns" Description="EPEX [OBOCompletionsEstimate], [CompletionsEstimate]" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"/>
+  <Field Name="mwlCompletionDate" ID="{c7f05446-2a74-4060-ba94-4e8882352528}" Type="DateTime" DisplayName="Completion Date" Group="AEC MWL Columns" Description="EPEX [FlowbackStartDate]" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateOnly" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"/>
+  <Field Name="mwlCounty" ID="{e960246d-9f62-40dd-a3dc-1e544cb42fbc}" Type="Text" DisplayName="County" Group="AEC MWL Columns" Description="EPEX [County]" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"/>
+  <Field Name="mwlCurrentDepth" ID="{C6F48ED1-3D05-4411-9862-A4563AAAB00E}" Type="Number" DisplayName="Current Depth" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Percentage="FALSE"/><!-- User Field -->
+  <Field Name="mwlDaysProducing" ID="{48271171-7850-41FB-A78D-ADAB156D7024}" Type="Number" DisplayName="Days Producing" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Percentage="FALSE"/><!-- User Field -->
+  <Field Name="mwlDeletedEPEXID" ID="{AD7189ED-DA49-4455-BBE8-DE228BBA74CF}" Type="Boolean" DisplayName="Deleted EPEXID" Description="Auto" Group="AEC MWL Columns" EnforceUniqueValues="FALSE" Indexed="FALSE" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE">
+    <Default>0</Default>
+  </Field>
+  <Field Name="mwlEpexDeletedDate" ID="{6711466C-4B9D-48E9-A8B0-B824FAE3E8D7}" Type="DateTime" DisplayName="Deleted Date" Description="Epex Deleted Date-Time" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateOnly" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"/>
+  <Field Name="mwlDirectionType" ID="{f5e8efbe-6f07-4359-afa3-5558f1eeaf93}" Type="Text" DisplayName="Direction Type" Group="AEC MWL Columns" Description="EPEX [WellType]" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"/>
+  <Field Name="mwlDrillingCostPerFt" ID="{47a61e68-138a-4a30-a8f1-cf3dd7effda6}" Type="Calculated" DisplayName="Drilling $/ft" Group="AEC MWL Columns" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateOnly" LCID="1033" ResultType="Currency" ReadOnly="TRUE" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE">
+    <Formula>=IF(mwlTD>0,IF(mwlDrillingCost>0,mwlDrillingCost/mwlTD,0),0)</Formula>
+    <FormulaDisplayNames>=IF([TD]>0,IF([Drilling Cost]>0,[Drilling Cost]/[TD],0),0)</FormulaDisplayNames>
+    <FieldRefs>
+      <FieldRef Name="mwlDrillingCost" />
+      <FieldRef Name="mwlTD" />
+    </FieldRefs>
+  </Field>
+  <Field Name="mwlDrillingCost" ID="{a7901cb4-fcec-4006-bdef-af38c0af1474}" Type="Number" DisplayName="Drilling Cost" Group="AEC MWL Columns" Description="EPEX [OBODrillingEstimate], [DrillingEstimate]" ShowInEditForm="FALSE" ShowInNewForm="FALSE" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE"/>
+  <Field Name="mwlDrillingDays" ID="{11e9df79-b015-4c96-a7de-6d7f3c575b56}" Type="Number" DisplayName="Drilling Days" Group="AEC MWL Columns" Description="CALULATED: =[OBOActualRigRelease]-[OBOActualSpud] OR [ActualRigRelease]-[ActualSpud]" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"/>
+  <Field Name="mwlDSU" ID="{38A4CF15-D7AA-423E-B8A0-F477F0FA8041}" Type="Text" DisplayName="DSU" Description="EPEX [DSU]" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"/>
+  <Field Name="mwlDSUSize" ID="{B359828A-4C71-4D4A-B0A9-899ECDAB2350}" Type="Number" DisplayName="DSU Size" Description="EPEX [NumberOfAcres]" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Percentage="FALSE" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"/>
+  <Field Name="mwlEpexID" ID="{43028F81-7880-4EBE-A156-B3753524362A}" Type="Number" DisplayName="Epex Well ID" Description="EPEX [WellId]" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Percentage="FALSE" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"/>
+  <Field Name="mwlEstimatedSpudDate" ID="{fc9a01fa-c629-4ed9-acc6-ebc3c3d53109}" Type="DateTime" DisplayName="Estimated Spud Date" Group="AEC MWL Columns" Description="EPEX [EstimatedSpud], [OBOEstimatedSpud]" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateOnly" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"/>
+  <Field Name="mwlField" ID="{3c361417-d15c-407a-a532-62a0af9237a4}" Type="Text" DisplayName="Field" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" Description="EPEX [Field]&#xD;&#xA;" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"/>
+  <Field Name="mwlFirstProduction" ID="{1c6550be-a948-4e1f-8756-8ef4cec87156}" Type="Text" DisplayName="First Production" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" Description="EPEX [FirstOilDate]" ShowInEditForm="FALSE" ShowInNewForm="FALSE" />
+  <Field Name="mwlFirstSaleDate" ID="{CE90B24B-436E-4BA1-A0B0-9397144E13A1}" Type="DateTime" DisplayName="First Sale Date" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateOnly"/><!-- User Field -->
+  <Field Name="mwlFormation" ID="{186c2579-399d-4fc4-ad40-69a78f2c7ab2}" Type="Text" DisplayName="Formation" Group="AEC MWL Columns" Description="EPEX [Formation]" ShowInEditForm="FALSE"  ShowInNewForm="FALSE" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" />
+  <Field Name="mwlFracDate" ID="{7e7bcfc4-25f6-4d3a-9d3d-94bd4748350e}" Type="DateTime" DisplayName="Frac Date" Group="AEC MWL Columns" Description="EPEX [ActualStartCompletion]" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateOnly" ShowInEditForm="FALSE" ShowInNewForm="FALSE" />
+  <Field Name="mwlFracStages" ID="{f295e940-fc64-470c-948d-08047bc851f5}" Type="Number" DisplayName="Frac Stages" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"/>
+  <Field Name="mwlGeologyComments" ID="{BEFD69AC-FA0E-431D-95F4-C29A3E49886D}" Type="Note" DisplayName="Geology Comments" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" NumLines="6" RichText="TRUE" RichTextMode="FullHtml" IsolateStyles="TRUE" Sortable="FALSE" /><!-- User Field -->
+  <Field Name="mwlGeoProgDate" ID="{D8A6F61F-EE12-4FDA-A2D5-04AE36410734}" Type="DateTime" DisplayName="GeoProg Date" Description="EPEX [GeoProgComplete]" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateOnly" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"/>
+  <Field Name="mwlJOA" ID="{cc435327-54ca-439e-ba41-3f01f79c2bed}" Type="Boolean" DisplayName="JOA" Group="AEC MWL Columns" EnforceUniqueValues="FALSE" Indexed="FALSE">
+    <Default>0</Default>
+  </Field><!-- User Field -->
+  <Field Name="mwlIP30BOEPDGross" ID="{57B7B8CD-DFF6-4BA1-8325-83D9B83EC084}" Type="Calculated" DisplayName="IP30 BOEPD Gross" Group="AEC MWL Columns" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateOnly" LCID="1033" ResultType="Number" ReadOnly="TRUE" >
+    <Formula>=mwlIP30BOPD+mwlIP30MMCFD/6</Formula>
+    <FormulaDisplayNames>=[IP30 BOPD]+[IP30 MMCFD]/6</FormulaDisplayNames>
+    <FieldRefs>
+      <FieldRef Name="mwlIP30BOPD" />
+      <FieldRef Name="mwlIP30MMCFD" />
+    </FieldRefs>
+  </Field>
+  <Field Name="mwlIP30BOEPDNet" ID="{F5A4B833-BF41-4828-B9DE-144E39D1F7B1}" Type="Calculated" DisplayName="IP30 BOEPD Net" Group="AEC MWL Columns" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateOnly" LCID="1033" ResultType="Number" ReadOnly="TRUE" >
+    <Formula>=mwlIP30BOEPDGross*mwlNRI</Formula>
+    <FormulaDisplayNames>=[IP30 BOEPD Gross]*[NRI]</FormulaDisplayNames>
+    <FieldRefs>
+      <FieldRef Name="mwlIP30BOEPDGross" />
+      <FieldRef Name="mwlNRI" />
+    </FieldRefs>
+  </Field>
+  <Field Name="mwlIP30BOPD" ID="{24845073-1BB9-450E-8937-428615A6BB81}" Type="Calculated" DisplayName="IP30 BOPD" Group="AEC MWL Columns" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateOnly" LCID="1033" ResultType="Number" ReadOnly="TRUE" >
+    <Formula>=IF(mwlDaysProducing=0,0,mwlBOPM/mwlDaysProducing)</Formula>
+    <FormulaDisplayNames>=IF([Days Producing]=0,0,[BOPM]/[Days Producing])</FormulaDisplayNames>
+    <FieldRefs>
+      <FieldRef Name="mwlBOPM" />
+      <FieldRef Name="mwlDaysProducing" />
+    </FieldRefs>
+  </Field>
+  <Field Name="mwlIP30MMCFD" ID="{D87CC1E2-5489-4B03-AD0F-0D14E065130B}" Type="Calculated" DisplayName="IP30 MMCFD" Group="AEC MWL Columns" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateOnly" LCID="1033" ResultType="Number" ReadOnly="TRUE" >
+    <Formula>=IF(mwlDaysProducing=0,0,mwlMCFM/mwlDaysProducing)</Formula>
+    <FormulaDisplayNames>=IF([Days Producing]=0,0,[MCFM]/[Days Producing])</FormulaDisplayNames>
+    <FieldRefs>
+      <FieldRef Name="mwlMCFM" />
+      <FieldRef Name="mwlDaysProducing" />
+    </FieldRefs>
+  </Field>
+  <Field Name="mwlLandComments" ID="{13184319-ed39-4910-b006-b6e22f351e5f}" Type="Note" DisplayName="Land Comments" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" NumLines="6" RichText="TRUE" RichTextMode="FullHtml" IsolateStyles="TRUE" Sortable="FALSE" /><!-- User Field -->
+  <Field Name="mwlLateralLength" ID="{8de6a2f2-479a-4718-b4c3-46b158ef127a}" Type="Text" DisplayName="Lateral Length" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" Description="EPEX [ActualLateralLength], [TargetLateralLength]" ShowInEditForm="FALSE" ShowInNewForm="FALSE" />
+  <Field Name="mwlLatitude" ID="{b4edac05-d62d-4b6b-9340-03d86494762a}" Type="Number" DisplayName="Latitude" Group="AEC MWL Columns" Description="GIS (SQL update query)" ShowInEditForm="FALSE" ShowInNewForm="FALSE" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" />
+  <Field Name="mwlLift" ID="{BBCB6B0E-D750-4B3B-B92A-8F9AB16078A1}" Type="Text" DisplayName="Lift" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255"/><!-- User Field -->
+  <Field Name="mwlLongitude" ID="{d18df2e0-3bfa-4bcd-ba3b-e7aae6c2f1bd}" Type="Number" DisplayName="Longitude" Group="AEC MWL Columns" Description="GIS (SQL update query)" ShowInEditForm="FALSE" ShowInNewForm="FALSE" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" />
+  <Field Name="mwlMCFM" ID="{D24B0C54-84D0-42BB-9293-E405500EBB90}" Type="Number" DisplayName="MCFM" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Percentage="FALSE"/><!-- User Field -->
+  <Field Name="mwlNRI" ID="{742fca4a-e038-4c00-a1c8-9e7e91e31e5d}" Type="Text" DisplayName="NRI" Group="AEC MWL Columns" Description="EPEX [NRIBpo], AFEN [AFEPARTNER/NETREVENUEINTEREST]" ShowInEditForm="FALSE" ShowInNewForm="FALSE" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" />
+  <Field Name="mwlOBOWell" ID="{BB119F54-0CC8-4793-8557-AE8BC4E44E48}" Type="Text" DisplayName="OBO Well" Description="EPEX [OperatedByOthers]" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"/>
+  <Field Name="mwlOpStatus" ID="{80FDF1FA-70C3-4894-9E12-02F2B963D37B}" Type="Text" DisplayName="Op Status" Description="Calculated within Data Mart" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"/>
+  <Field Name="mwlOperator" ID="{03cc4436-6580-4e27-95c2-4d8f0f384661}" Type="Text" DisplayName="Operator" Group="AEC MWL Columns" Description="EPEX [Operator]" ShowInEditForm="FALSE" ShowInNewForm="FALSE" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" />
+  <Field Name="mwlOpsComments" ID="{8E52A1D0-BB66-4EDC-8087-12F3DB98EBE2}" Type="Note" DisplayName="Ops Comments" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" NumLines="6" RichText="TRUE" RichTextMode="FullHtml" IsolateStyles="TRUE" Sortable="FALSE" /><!-- User Field -->
+  <Field Name="mwlORRIStatus" ID="{3F155AD9-DA02-4D21-AA73-2E229CD3D4E8}" Type="Text" DisplayName="ORRI Status" Description="EPEX Override field" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"/>
+  <Field Name="mwlPadName" ID="{0AEB1C84-1517-421A-8ED1-4131EC3028DA}" Type="Text" DisplayName="Pad Name" Description="EPEX [SharesPadWith]" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"/>
+  <Field Name="mwlPadType" ID="{49917C4A-4282-4A0F-8D1E-79F653B1EC79}" Type="Text" DisplayName="Pad Type" Description="EPEX [PadType]" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"/>
+  <Field Name="mwlPenaltyInterest" ID="{7FBF0DE4-0AB7-4203-81DD-4448F4D24389}" Type="Text" DisplayName="Penalty Interest" Description="AFEN [AFEPARTNER/CUSTOM5]" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" />
+  <Field Name="mwlProject" ID="{0b37f443-d2f4-492b-bcc9-4852680a1872}" Type="Text" DisplayName="Project" Group="AEC MWL Columns" Description="EPEX [Asset]" ShowInEditForm="FALSE" ShowInNewForm="FALSE" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" />
+  <Field Name="mwlProjectLink" ID="{1B9FE953-DC59-4F9E-8E62-3427760BA799}" Type="URL" DisplayName="Project Link" Description="" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="Hyperlink" />
+  <Field Name="mwlQQ" ID="{94635EE8-3473-4735-BCEE-AF199AFDC8BF}" Type="Text" DisplayName="QQ" Description="EPEX [TargetSurfaceQuadrant]" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" />
+  <Field Name="mwlQQBHL" ID="{4021C601-3332-42FA-82F6-EEFC3A0B07EC}" Type="Text" DisplayName="QQ BHL" Description="EPEX [Quadrant]" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" />
+  <Field Name="mwlRange" ID="{e42e658e-4cfd-402a-bdce-dc8351ab93ea}" Type="Text" DisplayName="Range" Description="EPEX [TargetSurfaceRange]" ShowInEditForm="FALSE" ShowInNewForm="FALSE" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255"  />
+  <Field Name="mwlEpexRefreshDateTime" ID="{AF293695-2DCA-4760-8000-A8A3652E93ED}" Type="DateTime" DisplayName="Epex Refresh DateTime" Description="DM Field: Epex.DateUpdated" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateOnly"/>
+  <Field Name="mwlReservoirComments" ID="{fe725514-4134-4996-8b85-cbe6dfae0c9b}" Type="Note" DisplayName="Reservoir Comments" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" NumLines="6" RichText="TRUE" RichTextMode="FullHtml" IsolateStyles="TRUE" Sortable="FALSE" /><!-- User Field -->
+  <Field Name="mwlRig" ID="{fd2127ee-867e-4204-91c5-18ecd2cf9a8f}" Type="Text" DisplayName="Rig" Group="AEC MWL Columns" Description="EPEX [OBORigName], [RigName]" ShowInEditForm="FALSE" ShowInNewForm="FALSE" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" />
+  <Field Name="mwlRigRelease" ID="{a393a707-b84b-4e5e-a217-52dcf73aa537}" FromBaseType="FALSE" Type="DateTime" DisplayName="Rig Release" Group="AEC MWL Columns" Description="EPEX [OBOActualRigRelease], [ActualRigRelease]" ShowInEditForm="FALSE" ShowInNewForm="FALSE" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateOnly" />
+  <Field Name="mwlSection" ID="{3bdb83b2-5402-459a-a9ef-202e1c8e75e6}" Type="Text" DisplayName="Section" Description="EPEX [TargetSurfaceSection]" ShowInEditForm="FALSE" ShowInNewForm="FALSE" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" />
+  <Field Name="mwlSpudDate" ID="{efcf8617-198b-4ca8-b213-010a907d5e49}" Type="DateTime" DisplayName="Spud Date" Description="EPEX [ActualSpud], [OBOActualSpud]" ShowInEditForm="FALSE" ShowInNewForm="FALSE" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateOnly" />
+  <Field Name="mwlState" ID="{c2bb2bd2-24d1-4069-ab7b-4f1468ae5388}" Type="Text" DisplayName="State" Group="AEC MWL Columns" Description="EPEX [State]&#xD;&#xA;" ShowInEditForm="FALSE" ShowInNewForm="FALSE" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" />
+  <Field Name="mwlStatus" ID="{3948d752-fa8e-4978-9a40-30058258ccd4}" Type="Text" DisplayName="Well Status" Group="AEC MWL Columns" Description="EPEX [WellStatus]" ShowInEditForm="FALSE" ShowInNewForm="FALSE" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" />
+  <Field Name="mwlSurveyComplete" ID="{77DDE3F9-9E07-4BBD-98EB-E77388AF9680}" Type="DateTime" DisplayName="Survey Complete" Description="" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateOnly"/>
+  <Field Name="mwlTD" ID="{891a1b4e-486a-4435-bb2a-048289ea9b39}" Type="Text" DisplayName="TD" Group="AEC MWL Columns" Description="EPEX [ActualTmd], [TargetTotalMeasuredDepth]" ShowInEditForm="FALSE" ShowInNewForm="FALSE" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" />
+  <Field Name="mwlTitleOpinion" ID="{7636a51b-9599-40da-b6ec-a6787c054547}" Type="Boolean" DisplayName="Title Opinion" Group="AEC MWL Columns" EnforceUniqueValues="FALSE" Indexed="FALSE">
+    <Default>0</Default>
+  </Field><!-- User Field -->
+  <Field Name="mwlTownship" ID="{d4ba453b-3338-49a9-8ca1-3d51e49315b3}" Type="Text" DisplayName="Township" Group="AEC MWL Columns" Description="EPEX [TargetSurfaceTownship]" ShowInEditForm="FALSE" ShowInNewForm="FALSE" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" />
+  <Field Name="mwlTrackDrilling" ID="{55C9E881-1FEF-4CA0-9E6D-77435FBFE49E}" Type="Boolean" DisplayName="Track Drilling" Group="AEC MWL Columns" EnforceUniqueValues="FALSE" Indexed="FALSE">
+    <Default>0</Default>
+  </Field>
+  <Field Name="mwlTrackLand" ID="{25E7489B-28AD-46F6-9BCE-91DAF7FB1C82}" Type="Boolean" DisplayName="Track Land" Group="AEC MWL Columns" EnforceUniqueValues="FALSE" Indexed="FALSE">
+    <Default>0</Default>
+  </Field>
+  <Field Name="mwlTrackOps" ID="{FAAFEB72-431C-4FD8-A499-562E4BAE947D}" Type="Boolean" DisplayName="Track Ops" Group="AEC MWL Columns" EnforceUniqueValues="FALSE" Indexed="FALSE">
+    <Default>0</Default>
+  </Field>
+  <Field Name="mwlTrackReservoir" ID="{0282D9C5-AE81-4792-AC7E-624BC4E2D1ED}" Type="Boolean" DisplayName="Track Reservoir" Group="AEC MWL Columns" EnforceUniqueValues="FALSE" Indexed="FALSE">
+    <Default>0</Default>
+  </Field>
+  <Field Name="mwlTVD" ID="{d3867aaf-5743-4b5b-99d8-79b3d4786d60}" Type="Text" DisplayName="TVD" Group="AEC MWL Columns" Description="EPEX [ActualTvd], [TargetTotalVerticalDepth]" ShowInEditForm="FALSE" ShowInNewForm="FALSE" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" />
+  <!--<Field Name="mwlWellName" ID="{53919103-17E8-45B4-8128-35CADC39D1FD}" Type="Text" DisplayName="Well Name" Description="EPEX[Name]" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" />-->
+  <Field Name="mwlWellSiteLink" ID="{B7171090-DDEE-4D0B-B669-6999EE1DEED6}" Type="URL" DisplayName="Well Site Link" Description="Auto" Group="AEC MWL Columns" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="Hyperlink" />
+  <Field Name="mwlWI" ID="{613bddbf-cc52-46aa-ab37-e86e23f17d94}" FromBaseType="FALSE" Type="Number" DisplayName="WI" Description="EPEX [WIBpo]" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Decimals="2" ShowInEditForm="FALSE" ShowInNewForm="FALSE" ShowInDisplayForm="TRUE"/>
+</Elements>

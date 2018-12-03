@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{133A4CB7-7E79-42B9-BF2F-4C702B24C689}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AEC.EnergyPortal.Lists</RootNamespace>
+    <AssemblyName>AEC.EnergyPortal.Lists</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Features\AECListsFeature\AECListsFeature.EventReceiver.cs">
+      <DependentUpon>AECListsFeature.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WellListEventReceiver\WellListEventReceiver.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AECMasterWellList\AECMasterWellListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f04bf7b6-8c63-4622-a2c6-5f8a5455f180}</SharePointProjectItemId>
+    </None>
+    <None Include="AECMasterWellList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{451cbcb2-0c5c-4103-92dd-7ef9d872ed13}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\AECListsFeature\AECListsFeature.feature">
+      <FeatureId>{d37cb229-8aeb-4113-b9b4-70b61757d916}</FeatureId>
+    </None>
+    <None Include="Fields\AECWellSiteFields\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c31a841d-822f-4fe3-a6d9-eee4b2112be7}</SharePointProjectItemId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Package\Package.package">
+      <PackageId>{bbce4cc7-166a-4eef-a6b1-1a5873a8eb33}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="ContentTypes\WellContentType\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{db251a3d-dfb6-4c26-b599-358baa875e1a}</SharePointProjectItemId>
+    </None>
+    <None Include="WellListEventReceiver\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{1c279798-8fa1-4622-8e59-e20d91dd3e71}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AEC.EnergyPortal.Core\AEC.EnergyPortal.Core.csproj">
+      <Project>{4744e5e5-3393-478d-ba82-22a891742ef3}</Project>
+      <Name>AEC.EnergyPortal.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AECMasterWellList\AECMasterWellListInstance\Elements.xml" />
+    <Content Include="AECMasterWellList\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="AECMasterWellList\Schema.xml" />
+    <Content Include="Features\AECListsFeature\AECListsFeature.Template.xml">
+      <DependentUpon>AECListsFeature.feature</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Fields\AECWellSiteFields\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ContentTypes\WellContentType\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="WellListEventReceiver\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

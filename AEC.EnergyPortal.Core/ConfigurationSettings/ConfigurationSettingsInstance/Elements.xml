@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="Configuration Settings" OnQuickLaunch="FALSE" TemplateType="100" Url="Lists/ConfigurationSettings" Description="Base Configuration Settings for AEC site. " Hidden="FALSE">
+    <Data>
+      <Rows>
+        <Row>
+          <Field Name="Title">WellStatus</Field>
+          <Field Name="ConfigValue">obo</Field>
+        </Row>
+      </Rows>
+    </Data>
+  </ListInstance>
+</Elements>

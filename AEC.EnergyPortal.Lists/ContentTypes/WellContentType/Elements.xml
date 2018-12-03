@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Item (0x01) -->
+  <ContentType ID="0x01002A482E23129E4EA5ACEB12A986D966EA" Name="Well Content Type" Group="AEC Content Types" Description="Master Content Type representing AEC wells." Inherits="TRUE" Version="0" Hidden="FALSE">
+    <FieldRefs>
+      <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" DisplayName="Well Name" Name="Title" Required='TRUE' ShowInDisplayForm='TRUE' ShowInEditForm='TRUE' ShowInListSettings='TRUE' ShowInNewForm='TRUE'/>
+      <FieldRef ID="{AD7CC326-A5D4-413C-A498-FCC79D88E348}" DisplayName="Acquired Date" Required="FALSE" Description="EPEX [AcquiredDate]" Name="mwlAcquiredDate" Format="DateOnly" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"/>
+      <FieldRef ID="{AAFB6D34-5E62-4BC1-A31E-8AC816FB1D46}" DisplayName="Acquired From" Required="FALSE" Description="EPEX [AcquiredFrom]" Name="mwlAcquiredFrom" ShowInDisplayForm="TRUE" ShowInEditForm="FALSE" ShowInNewForm="FALSE"/>
+      <FieldRef ID="{E0D4A299-2DE9-40DB-AC1D-36BFE0E59916}" DisplayName="Action Required" Required="FALSE" Name="mwlActionRequired" /> <!-- User Field -->
+      <FieldRef ID="{7CB06D92-BA64-48BA-9420-8EE3D6191329}" DisplayName="AFE Approval Date" Required="FALSE" Description="AFEN [AFE_APPROVALS/APPROVALDATE]" Name="mwlAFEApprovalDate" Format="DateOnly" />
+      <FieldRef ID="{937AAAAE-AD6B-4B2E-8C9E-8BCA5AAB90EB}" DisplayName="AFE Create Date" Required="FALSE" Description="AFEN [AFE_TOP/CREATION_DATE]" Name="mwlAFECreateDate" Format="DateOnly" />
+      <FieldRef ID="{54A6B098-9D87-41BE-AE0F-149EF6E25E28}" DisplayName="AFE Gross Actual" Required="FALSE" Description="AFEN [ACTUAL_AMOUNTS/GROSS_AMOUNT]" Name="mwlAFEGrossActual" />
+      <FieldRef ID="{1B7B319C-DFC8-4B6C-A8DA-B01F877124D4}" DisplayName="AFE Gross Estimate" Required="FALSE" Description="AFEN [AFE_TOP/TOTAL_GROSS_ESTIMATE]" Name="mwlAFEGrossEstimate" />
+      <FieldRef ID="{C8B40568-6C6F-4343-A0DB-1FC61A463EFA}" DisplayName="AFE Gross Field" Required="FALSE" Description="AFEN [FIELDCOST_AMOUNTS/GROSS_AMOUNT]" Name="mwlAFEGrossField" />
+      <FieldRef ID="{442EB6F2-9924-469B-A3A6-91DCDCEDC373}" DisplayName="AFE Link" Required="FALSE" Description="AFEN [AFE_TOP/DOCUMENT_ID]" Name="mwlAFELink" Format="Hyperlink" />
+      <FieldRef ID="{6F67EAAE-1E9A-4B31-B66D-7D0B756A4B37}" DisplayName="AFE Net Actual" Name="mwlAFENetActual" Format="DateOnly" ReadOnly="TRUE" />
+      <FieldRef ID="{7A56288F-E4CD-481A-967C-AFD61B739658}" DisplayName="AFE Net Estimate" Required="FALSE" Description="AFEN [AFE_TOP/TOTAL_NET_ESTIMATE]" Name="mwlAFENetEstimate" />
+      <FieldRef ID="{EBDB72C0-03A1-4F0C-B505-1D2F294BE61F}" DisplayName="AFE Net Field" Required="FALSE" Description="AFEN [FIELDCOST_AMOUNTS/NET_AMOUNT]" Name="mwlAFENetField" />
+      <FieldRef ID="{de4254a2-ad14-4740-90a8-01e9763ecfe7}" DisplayName="AFE Number" Required="FALSE" Description="AFEN [AFENUMBER/AFENUMBER]" Name="mwlAFENumber" />
+      <FieldRef ID="{9D61C537-0A16-4DA3-8072-C96816E3620B}" DisplayName="AFE OBO Deadline" Required="FALSE" Description="Data Mart field: OBOResponseDeadline" Name="mwlAFEOBODeadline" Format="DateOnly" />
+      <FieldRef ID="{6025cf62-760f-4af1-befb-774c5e289949}" DisplayName="AFE Received Date" Required="FALSE" Description="EPEX [OBOElectionReceived]" Name="mwlAFEReceivedDate" Format="DateOnly" />
+      <FieldRef ID="{59766583-B225-43BB-9499-744F3D90D68D}" DisplayName="AFE Status" Required="FALSE" Description="AFEN [AFE_TOP/STATUS]" Name="mwlAFEStatus" />
+      <FieldRef ID="{69D5D4EC-5521-41D8-BB49-29513C9BA3F6}" DisplayName="AFE Type" Required="FALSE" Description="AFEN [AFE_PRIMARY_ATTRIBUTES/ATTRIBUTE1_VALUE]" Name="mwlAFEType" />
+      <FieldRef ID="{767662e0-d2d7-4fc3-9751-90846c984ea4}" DisplayName="APD Approved Date" Required="FALSE" Description="EPEX [ApdApprovedDate]" Name="mwlAPDApprovedDate" Format="DateOnly" />
+      <FieldRef ID="{F4ABDBF9-28BF-4189-B9FA-B70DC5B4E706}" DisplayName="APD Expiration Date" Required="FALSE" Description="EPEX [ApdExpirationDate]" Name="mwlAPDExpirationDate" Format="DateOnly" />
+      <FieldRef ID="{98f92ee3-75dc-4ec7-ada5-42b3c2627f3e}" DisplayName="API" Required="FALSE" Description="EPEX [ApiNumber]" Name="mwlAPI" />
+      <FieldRef ID="{816d1964-73d6-4724-9c99-ccacf15102d3}" DisplayName="BH Latitude" Required="FALSE" Description="EPEX [ActualBottomLatitude], [TargetBottomLatitude]" Name="mwlBHLatitude" />
+      <FieldRef ID="{c014b4cf-d44c-42ac-bff8-9abefd7f62b0}" DisplayName="BH Longitude" Required="FALSE" Description="EPEX [ActualBottomLongitude], [TargetBottomLongitude]" Name="mwlBHLongitude" />
+      <FieldRef ID="{49ecd47a-de93-4013-9943-76180882d451}" DisplayName="BH Range" Required="FALSE" Description="EPEX [ActualBottomRange], [TargetBottomRange]" Name="mwlBHRange" />
+      <FieldRef ID="{d4878193-96dc-48c5-a44f-0606eb6eb520}" DisplayName="BH Section" Required="FALSE" Description="EPEX [ActualBottomSection], [TargetBottomSection]" Name="mwlBHSection" />
+      <FieldRef ID="{55947eab-9a03-460c-a57d-9d1cb314fdd6}" DisplayName="BH Township" Required="FALSE" Description="EPEX [ActualBottomTownship], [TargetBottomTownship]" Name="mwlBHTownship" />
+      <FieldRef ID="{C9BE404E-49B9-494E-8425-D76EA9E16ADD}" DisplayName="BOPM" Required="FALSE" Description="" Name="mwlBOPM" ShowInEditForm="FALSE" ShowInNewForm="FALSE" />
+      <FieldRef ID="{50B3B080-8F55-4E2F-9802-80733CC0FF59}" DisplayName="Budget Year" Required="FALSE" Description="AFEN [AFE_TOP/BUDGET_YEAR]" Name="mwlBudgetYear" />
+      <FieldRef ID="{cf26c20f-0279-40fe-8763-5c54bf2af85f}" DisplayName="Comm. Agreement" Name="mwlCommunizationAgreement" /> <!-- User Field -->
+      <FieldRef ID="{8068963e-f1d7-47e2-86fa-742beb4c7314}" DisplayName="Completion Cost" Required="FALSE" Description="EPEX [OBOCompletionsEstimate], [CompletionsEstimate]" Name="mwlCompletionCost" />
+      <FieldRef ID="{c7f05446-2a74-4060-ba94-4e8882352528}" DisplayName="Completion Date" Required="FALSE" Description="EPEX [FlowbackStartDate]" Name="mwlCompletionDate" Format="DateOnly" />
+      <FieldRef ID="{e960246d-9f62-40dd-a3dc-1e544cb42fbc}" DisplayName="County" Required="FALSE" Description="EPEX [County]" Name="mwlCounty" />
+      <FieldRef ID="{C6F48ED1-3D05-4411-9862-A4563AAAB00E}" DisplayName="Current Depth" Required="FALSE" Name="mwlCurrentDepth" /><!-- User Field -->
+      <FieldRef ID="{48271171-7850-41FB-A78D-ADAB156D7024}" DisplayName="Days Producing" Required="FALSE" Name="mwlDaysProducing" /><!-- User Field -->
+      <FieldRef ID="{6711466C-4B9D-48E9-A8B0-B824FAE3E8D7}" DisplayName="Deleted Date" Required="FALSE" Description="Epex Deleted Date-Time" Name="mwlEpexDeletedDate" Format="DateOnly" />
+      <FieldRef ID="{f5e8efbe-6f07-4359-afa3-5558f1eeaf93}" DisplayName="Direction Type" Required="FALSE" Description="EPEX [WellType]" Name="mwlDirectionType" />
+      <FieldRef ID="{47a61e68-138a-4a30-a8f1-cf3dd7effda6}" DisplayName="Drilling $/ft" Name="mwlDrillingCostPerFt" Format="DateOnly" ReadOnly="TRUE" />
+      <FieldRef ID="{a7901cb4-fcec-4006-bdef-af38c0af1474}" DisplayName="Drill Cost" Required="FALSE" Description="EPEX [OBODrillingEstimate], [DrillingEstimate]" Name="mwlDrillingCost" />
+      <FieldRef ID="{11e9df79-b015-4c96-a7de-6d7f3c575b56}" DisplayName="Drilling Days" Required="FALSE" Description="CALULATED: =[OBOActualRigRelease]-[OBOActualSpud] OR [ActualRigRelease]-[ActualSpud]" Name="mwlDrillingDays" ReadOnly="TRUE" />
+      <FieldRef ID="{38A4CF15-D7AA-423E-B8A0-F477F0FA8041}" DisplayName="DSU" Required="FALSE" Description="EPEX [DSU]" Name="mwlDSU" />
+      <FieldRef ID="{B359828A-4C71-4D4A-B0A9-899ECDAB2350}" DisplayName="DSU Size" Required="FALSE" Description="EPEX [NumberOfAcres]" Name="mwlDSUSize" />
+      <FieldRef ID="{43028F81-7880-4EBE-A156-B3753524362A}" DisplayName="EpexID" Required="FALSE" Description="EPEX [WellId]" Name="mwlEpexID" />
+      <FieldRef ID="{fc9a01fa-c629-4ed9-acc6-ebc3c3d53109}" DisplayName="Estimated Spud Date" Required="FALSE" Description="EPEX [EstimatedSpud], [OBOEstimatedSpud]" Name="mwlEstimatedSpudDate" Format="DateOnly" />
+      <FieldRef ID="{3c361417-d15c-407a-a532-62a0af9237a4}" DisplayName="Field" Required="FALSE" Description="EPEX [Field]&#xD;&#xA;" Name="mwlField" />
+      <FieldRef ID="{1c6550be-a948-4e1f-8756-8ef4cec87156}" DisplayName="First Production" Required="FALSE" Description="EPEX [FirstOilDate]" Name="mwlFirstProduction" ShowInEditForm="FALSE" ShowInNewForm="FALSE" />
+      <FieldRef ID="{CE90B24B-436E-4BA1-A0B0-9397144E13A1}" DisplayName="First Sale Date" Required="FALSE" Name="mwlFirstSaleDate" Format="DateOnly" /><!-- User Field -->
+      <FieldRef ID="{186c2579-399d-4fc4-ad40-69a78f2c7ab2}" DisplayName="Formation" Required="FALSE" Description="EPEX [Formation]" Name="mwlFormation" ShowInEditForm="FALSE" ShowInNewForm="FALSE" />
+      <FieldRef ID="{7e7bcfc4-25f6-4d3a-9d3d-94bd4748350e}" DisplayName="Frac Date" Required="FALSE" Description="EPEX [ActualStartCompletion]" Name="mwlFracDate" Format="DateOnly" ShowInEditForm="FALSE" ShowInNewForm="FALSE" />
+      <FieldRef ID="{f295e940-fc64-470c-948d-08047bc851f5}" DisplayName="Frac Stages" Required="FALSE" Name="mwlFracStages" />
+      <FieldRef ID="{BEFD69AC-FA0E-431D-95F4-C29A3E49886D}" DisplayName="Geology Comments" Required="FALSE" Name="mwlGeologyComments" NumLines="6" Sortable="FALSE" />
+      <FieldRef ID="{D8A6F61F-EE12-4FDA-A2D5-04AE36410734}" DisplayName="GeoProg Date" Required="FALSE" Description="EPEX [GeoProgComplete]" Name="mwlGeoProgDate" Format="DateOnly" />
+      <FieldRef ID="{cc435327-54ca-439e-ba41-3f01f79c2bed}" DisplayName="JOA" Name="mwlJOA" /><!-- User Field -->
+      <FieldRef ID="{57B7B8CD-DFF6-4BA1-8325-83D9B83EC084}" DisplayName="IP30 BOEPD Gross" Name="mwlIP30BOEPDGross" Format="DateOnly" ReadOnly="TRUE" />
+      <FieldRef ID="{F5A4B833-BF41-4828-B9DE-144E39D1F7B1}" DisplayName="IP30 BOEPD Net" Name="mwlIP30BOEPDNet" Format="DateOnly" ReadOnly="TRUE" />
+      <FieldRef ID="{24845073-1BB9-450E-8937-428615A6BB81}" DisplayName="IP30 BOPD" Name="mwlIP30BOPD" Format="DateOnly" ReadOnly="TRUE" />
+      <FieldRef ID="{D87CC1E2-5489-4B03-AD0F-0D14E065130B}" DisplayName="IP30 MMCFD" Name="mwlIP30MMCFD" Format="DateOnly" ReadOnly="TRUE" />
+      <FieldRef ID="{13184319-ed39-4910-b006-b6e22f351e5f}" DisplayName="Land Comments" Required="FALSE" Name="mwlLandComments" NumLines="6" Sortable="FALSE" /><!-- User Field -->
+      <FieldRef ID="{8de6a2f2-479a-4718-b4c3-46b158ef127a}" DisplayName="Lateral Length" Required="FALSE" Description="EPEX [ActualLateralLength], [TargetLateralLength]" Name="mwlLateralLength" ShowInEditForm="FALSE" ShowInNewForm="FALSE" />
+      <FieldRef ID="{b4edac05-d62d-4b6b-9340-03d86494762a}" DisplayName="Latitude" Required="FALSE" Description="GIS (SQL update query)" Name="mwlLatitude" ShowInEditForm="FALSE" ShowInNewForm="FALSE" />
+      <FieldRef ID="{BBCB6B0E-D750-4B3B-B92A-8F9AB16078A1}" DisplayName="Lift" Required="FALSE" Name="mwlLift" /><!-- User Field -->
+      <FieldRef ID="{d18df2e0-3bfa-4bcd-ba3b-e7aae6c2f1bd}" DisplayName="Longitude" Required="FALSE" Description="GIS (SQL update query)" Name="mwlLongitude" ShowInEditForm="FALSE" ShowInNewForm="FALSE" />
+      <FieldRef ID="{D24B0C54-84D0-42BB-9293-E405500EBB90}" DisplayName="MCFM" Required="FALSE" Name="mwlMCFM" /><!-- User Field -->
+      <FieldRef ID="{742fca4a-e038-4c00-a1c8-9e7e91e31e5d}" DisplayName="NRI" Required="FALSE" Description="EPEX [NRIBpo], AFEN [AFEPARTNER/NETREVENUEINTEREST]" Name="mwlNRI" ShowInEditForm="FALSE" ShowInNewForm="FALSE" />
+      <FieldRef ID="{BB119F54-0CC8-4793-8557-AE8BC4E44E48}" DisplayName="OBO Well" Required="FALSE" Description="EPEX [OperatedByOthers]" Name="mwlOBOWell" />
+      <FieldRef ID="{80FDF1FA-70C3-4894-9E12-02F2B963D37B}" DisplayName="Op Status" Required="FALSE" Description="Calculated within Data Mart" Name="mwlOpStatus" />
+      <FieldRef ID="{03cc4436-6580-4e27-95c2-4d8f0f384661}" DisplayName="Operator" Required="FALSE" Description="EPEX [Operator]" Name="mwlOperator" ShowInEditForm="FALSE" ShowInNewForm="FALSE" />
+      <FieldRef ID="{8E52A1D0-BB66-4EDC-8087-12F3DB98EBE2}" DisplayName="Ops Comments" Required="FALSE" Name="mwlOpsComments" NumLines="6" Sortable="FALSE" /><!-- User Field -->
+      <FieldRef ID="{3F155AD9-DA02-4D21-AA73-2E229CD3D4E8}" DisplayName="ORRI Status" Required="FALSE" Description="EPEX Override field" Name="mwlORRIStatus" />
+      <FieldRef ID="{0AEB1C84-1517-421A-8ED1-4131EC3028DA}" DisplayName="Pad Name" Required="FALSE" Description="EPEX [SharesPadWith]" Name="mwlPadName" />
+      <FieldRef ID="{49917C4A-4282-4A0F-8D1E-79F653B1EC79}" DisplayName="Pad Type" Required="FALSE" Description="EPEX [PadType]" Name="mwlPadType" />
+      <FieldRef ID="{7FBF0DE4-0AB7-4203-81DD-4448F4D24389}" DisplayName="Penalty Interest" Required="FALSE" Description="AFEN [AFEPARTNER/CUSTOM5]" Name="mwlPenaltyInterest" />
+      <FieldRef ID="{0b37f443-d2f4-492b-bcc9-4852680a1872}" DisplayName="Project" Required="FALSE" Description="EPEX [Asset]" Name="mwlProject" ShowInEditForm="FALSE" ShowInNewForm="FALSE" />
+      <FieldRef ID="{1B9FE953-DC59-4F9E-8E62-3427760BA799}" DisplayName="Project Link" Required="FALSE" Description="" Name="mwlProjectLink" Format="Hyperlink" />
+      <FieldRef ID="{94635EE8-3473-4735-BCEE-AF199AFDC8BF}" DisplayName="QQ" Required="FALSE" Description="EPEX [TargetSurfaceQuadrant]" Name="mwlQQ" />
+      <FieldRef ID="{e42e658e-4cfd-402a-bdce-dc8351ab93ea}" DisplayName="Range" Required="FALSE" Description="EPEX [TargetSurfaceRange]" Name="mwlRange" ShowInEditForm="FALSE" ShowInNewForm="FALSE" />
+      <FieldRef ID="{AF293695-2DCA-4760-8000-A8A3652E93ED}" DisplayName="Epex Refresh DateTime" Required="FALSE" Description="DM Field: Epex.DateUpdated" Name="mwlEpexRefreshDateTime" Format="DateOnly" />
+      <FieldRef ID="{fe725514-4134-4996-8b85-cbe6dfae0c9b}" DisplayName="Reservoir Comments" Required="FALSE" Name="mwlReservoirComments" NumLines="6" Sortable="FALSE" />
+      <FieldRef ID="{fd2127ee-867e-4204-91c5-18ecd2cf9a8f}" DisplayName="Rig" Required="FALSE" Description="EPEX [OBORigName], [RigName]" Name="mwlRig" ShowInEditForm="FALSE" ShowInNewForm="FALSE" />
+      <FieldRef ID="{a393a707-b84b-4e5e-a217-52dcf73aa537}" DisplayName="Rig Release" Required="FALSE" Description="EPEX [OBOActualRigRelease], [ActualRigRelease]" Name="mwlRigRelease" Format="DateOnly" ShowInEditForm="FALSE" ShowInNewForm="FALSE" />
+      <FieldRef ID="{3bdb83b2-5402-459a-a9ef-202e1c8e75e6}" DisplayName="Section" Required="FALSE" Description="EPEX [TargetSurfaceSection]" Name="mwlSection" ShowInEditForm="FALSE" ShowInNewForm="FALSE" />
+      <FieldRef ID="{efcf8617-198b-4ca8-b213-010a907d5e49}" DisplayName="Spud Date" Required="FALSE" Description="EPEX [ActualSpud], [OBOActualSpud]" Name="mwlSpudDate" Format="DateOnly" ShowInEditForm="FALSE" ShowInNewForm="FALSE" />
+      <FieldRef ID="{c2bb2bd2-24d1-4069-ab7b-4f1468ae5388}" DisplayName="State" Required="FALSE" Description="EPEX [State]&#xD;&#xA;" Name="mwlState" ShowInEditForm="FALSE" ShowInNewForm="FALSE" />
+      <FieldRef ID="{3948d752-fa8e-4978-9a40-30058258ccd4}" DisplayName="Status" Required="FALSE" Description="EPEX [WellStatus]" Name="mwlStatus" ShowInEditForm="FALSE" ShowInNewForm="FALSE" />
+      <FieldRef ID="{77DDE3F9-9E07-4BBD-98EB-E77388AF9680}" DisplayName="Survey Complete" Required="FALSE" Description="" Name="mwlSurveyComplete" Format="DateOnly" />
+      <FieldRef ID="{891a1b4e-486a-4435-bb2a-048289ea9b39}" DisplayName="TD" Required="FALSE" Description="EPEX [ActualTmd], [TargetTotalMeasuredDepth]" Name="mwlTD" ShowInEditForm="FALSE" ShowInNewForm="FALSE" />
+      <FieldRef ID="{2B52AEBF-6B64-4243-B4E8-47F9684F394A}" DisplayName="TD Date" Required="FALSE" Description="EPEX [TdDate]" Name="mwlTDDate" Format="DateOnly" />
+      <FieldRef ID="{7636a51b-9599-40da-b6ec-a6787c054547}" DisplayName="Title Opinion" Name="mwlTitleOpinion" /><!-- User Field -->
+      <FieldRef ID="{d4ba453b-3338-49a9-8ca1-3d51e49315b3}" DisplayName="Township" Required="FALSE" Description="EPEX [TargetSurfaceTownship]" Name="mwlTownship" ShowInEditForm="FALSE" ShowInNewForm="FALSE" />
+      <FieldRef ID="{55C9E881-1FEF-4CA0-9E6D-77435FBFE49E}" DisplayName="Track Drilling" Name="mwlTrackDrilling" /><!-- User Field -->
+      <FieldRef ID="{25E7489B-28AD-46F6-9BCE-91DAF7FB1C82}" DisplayName="Track Land" Name="mwlTrackLand" /><!-- User Field -->
+      <FieldRef ID="{FAAFEB72-431C-4FD8-A499-562E4BAE947D}" DisplayName="Track Ops" Name="mwlTrackOps" /><!-- User Field -->
+      <FieldRef ID="{0282D9C5-AE81-4792-AC7E-624BC4E2D1ED}" DisplayName="Track Reservoir" Name="mwlTrackReservoir" /><!-- User Field -->
+      <FieldRef ID="{d3867aaf-5743-4b5b-99d8-79b3d4786d60}" DisplayName="TVD" Required="FALSE" Description="EPEX [ActualTvd], [TargetTotalVerticalDepth]" Name="mwlTVD" ShowInEditForm="FALSE" ShowInNewForm="FALSE" />
+      <FieldRef ID="{B7171090-DDEE-4D0B-B669-6999EE1DEED6}" DisplayName="Well Site Link" Required="FALSE" Description="Auto" Name="mwlWellSiteLink" Format="Hyperlink" />
+      <FieldRef ID="{613bddbf-cc52-46aa-ab37-e86e23f17d94}" DisplayName="WI" Required="FALSE" Description="EPEX [WIBpo]" Name="mwlWI" ShowInEditForm="FALSE" ShowInNewForm="FALSE" />
+      <FieldRef ID="{AD7189ED-DA49-4455-BBE8-DE228BBA74CF}" DisplayName="Deleted EPEXID" Description="Auto" Name="mwlDeleted EPEXID" />
+      <FieldRef ID="{4021C601-3332-42FA-82F6-EEFC3A0B07EC}" DisplayName="QQ BHL" Required="FALSE" Description="EPEX [Quadrant]" Name="mwlQQBHL" />
+    </FieldRefs>
+  </ContentType>
+</Elements>
